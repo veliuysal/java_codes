@@ -1,0 +1,3 @@
+Merhaba, Dünya!
+Sayı: 42,00,
+ Metin: Ope, Boolean: true  

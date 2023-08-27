@@ -17,7 +17,7 @@ public class Soru1 {
         while (index<10){
             System.out.println("Telefon Numarasını Giriniz:");
             String telefonNumarasi=scanner.next();
-            if(telefonNumarasiCorrectFormat(telefonNumarasi)){
+            if(telefonNumarasiCorrectFormat(telefonNumarasi, kisiler, index)){
                 kisiler[index++]= Integer.parseInt(telefonNumarasi);
             }else
                 System.out.println("Yanlış Formatta Telefon Numarası girdiniz.");
@@ -25,10 +25,22 @@ public class Soru1 {
         System.out.println(Arrays.toString(kisiler));
     }
 
-    public static boolean telefonNumarasiCorrectFormat(String telefonNumarasi){
-        if(telefonNumarasi.startsWith("5") && checkExpLengthCorrect(telefonNumarasi,10) && isDigit(telefonNumarasi))
+    public static boolean telefonNumarasiCorrectFormat(String telefonNumarasi, int[] kisiler, int index){
+        if(telefonNumarasi.startsWith("5") && checkExpLengthCorrect(telefonNumarasi,10)
+                && isDigit(telefonNumarasi) && isNotRepeat(kisiler, telefonNumarasi, index))
             return true;
         return false;
+    }
+
+    private static boolean isNotRepeat(int[] kisiler, String telefonNumarasi, int index) {
+      if(index>0){
+          for(int i=0; i< index; i++){
+              if (String.valueOf(kisiler[i]).equals(telefonNumarasi)) {
+                  return false;
+              }
+          }
+      }
+      return true;
     }
 
     public static boolean isDigit(String exp){

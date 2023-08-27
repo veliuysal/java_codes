@@ -11,7 +11,7 @@ public class Soru1 {
 
 
     public static void main(String[] args) {
-        int[] kisiler=new int[10];
+        long[] kisiler=new long[10];
         Scanner scanner=new Scanner(System.in);
         int index=0;
         while (index<10){
@@ -22,18 +22,28 @@ public class Soru1 {
             }else
                 System.out.println("Yanlış Formatta Telefon Numarası girdiniz.");
         }
-       // dosyaya yaz metodu ve dosyadan oku isimli 2 metod olacak. Okunan dosyadaki satırları da ekrana yazdıracağız. telefon_rehberi.txt 
-        System.out.println(Arrays.toString(kisiler));
+       // dosyaya yaz metodu ve dosyadan oku isimli 2 metod olacak. Okunan dosyadaki satırları da ekrana yazdıracağız. telefon_rehberi.txt
+        //System.out.println(Arrays.toString(kisiler));
+        dosyayaYaz(kisiler);
+        dosyadanOku();
     }
 
-    public static boolean telefonNumarasiCorrectFormat(String telefonNumarasi, int[] kisiler, int index){
+    public static void dosyayaYaz(long[] kisiler){
+
+    }
+
+    public static void dosyadanOku(){
+
+    }
+
+    public static boolean telefonNumarasiCorrectFormat(String telefonNumarasi, long[] kisiler, int index){
         if(telefonNumarasi.startsWith("5") && checkExpLengthCorrect(telefonNumarasi,10)
                 && isDigit(telefonNumarasi) && isNotRepeat(kisiler, telefonNumarasi, index))
             return true;
         return false;
     }
 
-    private static boolean isNotRepeat(int[] kisiler, String telefonNumarasi, int index) {
+    private static boolean isNotRepeat(long[] kisiler, String telefonNumarasi, int index) {
       if(index>0){
           for(int i=0; i< index; i++){
               if (String.valueOf(kisiler[i]).equals(telefonNumarasi)) {

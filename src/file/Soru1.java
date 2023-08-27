@@ -1,5 +1,9 @@
 package file;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -29,11 +33,28 @@ public class Soru1 {
     }
 
     public static void dosyayaYaz(long[] kisiler){
-
+        try(FileWriter fw= new FileWriter("telefon_rehberi.txt", true)) {
+            for(int i=0;i<kisiler.length;i++){
+                fw.write(String.valueOf(kisiler[i]));
+                if(i != kisiler.length - 1)
+                    System.out.println("\n");
+            }
+           fw.flush();
+        } catch (Exception e) {
+            System.out.println("Yazma işleminde hata aldık.");
+        }
     }
 
     public static void dosyadanOku(){
-
+        try(FileReader fr=new FileReader("telefon_rehberi.tx")){
+            int i;
+            while((i=fr.read())!=-1) {
+                System.out.print((char)i);
+            }
+            fr.close();
+        } catch (Exception e) {
+            System.out.println("Okuma işleminde hata aldık.");
+        }
     }
 
     public static boolean telefonNumarasiCorrectFormat(String telefonNumarasi, long[] kisiler, int index){

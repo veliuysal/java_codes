@@ -6,7 +6,8 @@ public class Soru2 {
     //Cumleyi tersten yazdırma metodu
     //isPalindrome metoduyla da tersini aldığımız cümlenin karşılaştırılması
     public static void main(String[] args) {
-        String cumle="BilgeAdam Java Dersi";
+       // String cumle="BilgeAdam Java Dersi";
+        String cumle="Ey Nihat Adanada tahin ye";
         System.out.println("Cümle: "+cumle);
         String tersCumle = tersiniGetir(cumle);
         System.out.println("Cümlenin tersi : "+tersCumle);
@@ -18,7 +19,7 @@ public class Soru2 {
     }
 
     private static boolean isPalindrome(String cumle, String tersCumle) {
-        return cumle.equals(tersCumle);
+        return cumle.toLowerCase().equals(tersCumle.toLowerCase());
     }
 
     public static String tersiniGetir(String cumle){

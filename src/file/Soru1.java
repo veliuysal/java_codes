@@ -22,6 +22,7 @@ public class Soru1 {
             }else
                 System.out.println("Yanlış Formatta Telefon Numarası girdiniz.");
         }
+       // dosyaya yaz metodu ve dosyadan oku isimli 2 metod olacak. Okunan dosyadaki satırları da ekrana yazdıracağız. telefon_rehberi.txt 
         System.out.println(Arrays.toString(kisiler));
     }
 

@@ -74,7 +74,19 @@ public class ExtendingAndMultipleInterface {
     //Daha sonra ise birer class ile bu yeni oluşan 2 dil interface'ini implemente edelim.
 
     public static void main(String[] args) {
+        //HumanLanguage & Language
         Turkish turkish =new Turkish();
+        turkish.getCountry();
+        turkish.getName();
+        turkish.setCountry("Azerbaycan");
+        turkish.setName("İstanbul Türkçesi");
+
+        //ProgrammingLanguage & Language
+        Java java=new Java();
+        java.getUsingArea();
+        java.getName();
+        java.setUsingArea("Web Programlama");
+        java.setName("Java 1.8");
     }
 
 }

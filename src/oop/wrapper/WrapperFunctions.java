@@ -5,7 +5,7 @@ public class WrapperFunctions {
         System.out.println("------Integer-------");
         Integer integer1 = Integer.valueOf("50");//String --> Wrapper
         System.out.println(integer1);
-        
+
         System.out.println("------Boolean-------");
         Boolean boolean1 = Boolean.valueOf("falsE");
         Boolean boolean2 = Boolean.valueOf(true);

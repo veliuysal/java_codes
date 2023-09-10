@@ -81,12 +81,20 @@ public class ExtendingAndMultipleInterface {
         turkish.setCountry("Azerbaycan");
         turkish.setName("İstanbul Türkçesi");
 
+        //HumanLanguage
+        HumanLanguage humanLanguage = new Turkish();
+        humanLanguage.getCountry();
+
         //ProgrammingLanguage & Language
         Java java=new Java();
         java.getUsingArea();
         java.getName();
         java.setUsingArea("Web Programlama");
         java.setName("Java 1.8");
+
+        //ProgrammingLanguage
+        ProgrammingLanguage programmingLanguage= new Java();
+        programmingLanguage.getUsingArea();
     }
 
 }

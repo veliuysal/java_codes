@@ -23,7 +23,7 @@ public class IteratorInLinkedHashMap {
             System.out.print(", ");
             iterate.remove();
         }
-        
+
         System.out.println("After Remove In Iterate: " + numbers);
 
     }

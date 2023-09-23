@@ -31,7 +31,8 @@ public class TwoTypeGenericsClass<T, S> {
         twoTypes.setSecond(9);
         System.out.println("First: "+twoTypes.getFirst()+" - Second: " +twoTypes.getSecond());
 
-
+        TwoTypeGenericsClass<String, Integer> twoTypes2 =new TwoTypeGenericsClass<>("Bilge Adam Java Eğitimi", 9);
+        System.out.println("First: "+twoTypes2.getFirst()+" - Second: " +twoTypes2.getSecond());
 
     }
 }

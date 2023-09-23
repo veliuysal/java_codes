@@ -1,6 +1,7 @@
 package generics;
 
 interface Bottle {
+
     void setBrand(String brand);
 
     String getBrand();
@@ -14,7 +15,7 @@ interface Bottle {
     String getType();
 }
 
-class MainBottle implements Bottle {
+abstract class MainBottle implements Bottle {
 
     private String brand;
     private int capacity;

@@ -6,15 +6,10 @@ import practices.one.enums.GearType;
 import practices.one.enums.TireCount;
 
 public interface IVehicle {
-    void setEngineType(EngineType engineType);
 
-    void setProductionYear(Integer year);
+    void assignAttribute(EngineType engineType, Integer year, TireCount tireCount, String model, Colour colour, GearType gearType);
 
-    void setTireCount(TireCount tireCount);
+    void run();
 
-    void setModel(String model);
-
-    void setColour(Colour colour);
-
-    void setGearType(GearType gearType);
+    void stop();
 }

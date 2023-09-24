@@ -3,6 +3,7 @@ package practices.one;
 import practices.one.enums.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class VehicleFabric {
@@ -38,16 +39,25 @@ public class VehicleFabric {
     //void calistir();
     //void durdur();
 
-    List<Car> cars;
-    List<Bicycle> bicycles;
-    List<Motorcycle> motorcycles;
-    List<Van> vans;
+    static List<Car> cars;
+    static List<Bicycle> bicycles;
+    static List<Motorcycle> motorcycles;
+    static List<Van> vans;
+
+    static List<Car> soldCars;
+    static List<Bicycle> soldBicycles;
+    static List<Motorcycle> soldMotorcycles;
+    static List<Van> soldVans;
 
     VehicleFabric() {
         cars = new ArrayList<>();
         bicycles = new ArrayList<>();
         motorcycles = new ArrayList<>();
         vans = new ArrayList<>();
+        soldBicycles = new ArrayList<>();
+        soldMotorcycles = new ArrayList<>();
+        soldCars = new ArrayList<>();
+        soldVans = new ArrayList<>();
         System.out.println("Vehicle Fabric is started to product...");
     }
 
@@ -109,11 +119,38 @@ public class VehicleFabric {
         }
     }
 
+    public <T> List<T> sell(List<T> list, int count) {
+        List<T> soldList = new ArrayList<>();
+        if (list == null || count > list.size()) {
+            return soldList;
+        }
 
-
-    public static void main(String[] args) {
-
+        for (int i = 0; i < count; i++) {
+            T element = list.get(list.size() - 1);
+            soldList.add(element);
+            list.remove(list.size() - 1);
+        }
+        return soldList;
     }
 
+    public <T> void add(List<T> list, List<T> sold) {
+        list.addAll(sold);
+    }
+
+    public <T> void addAndPrintAll(List<T> list, List<T> sold, String printWords) {
+        list.addAll(sold);
+        print(list, printWords);
+    }
+
+    public <T> void print(List<T> list, String printWords) {
+        System.out.println(printWords + list.size());
+    }
+
+    public void printAll() {
+        System.out.println("Cars: " + cars.size());
+        System.out.println("Motorcycles: " + motorcycles.size());
+        System.out.println("Vans: " + vans.size());
+        System.out.println("Bicycles: " + bicycles.size());
+    }
 
 }

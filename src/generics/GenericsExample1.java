@@ -20,7 +20,7 @@ public class GenericsExample1 {
         footballPlayerTeam.addPlayer(footballPlayer2);
 
         footballPlayerTeam.listPlayers();
-        
+
         BasketPlayer basketPlayer=new BasketPlayer("JS");
         basketPlayerTeam.addPlayer(basketPlayer);
     }

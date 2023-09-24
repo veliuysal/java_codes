@@ -26,7 +26,7 @@ public class OOPPractices1 {
 
     //Yakıt Interface'i
     //void setYakitTuru(YakitTuru);
-    //void setDepoHacmi();
+    //void setDepoHacmi(Integer);
 
     //Abstract Araç Class
     //abstract setBoyut(AracBoyut);

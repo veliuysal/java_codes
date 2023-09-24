@@ -1,9 +1,12 @@
 package practices.one;
 
+import practices.one.abstracts.AbstractVehicle;
 import practices.one.enums.FuelType;
+import practices.one.enums.VehicleDimension;
 import practices.one.interfaces.IFuel;
+import practices.one.interfaces.IVehicle;
 
-public class Car extends Vehicle implements IFuel {
+public class Car extends AbstractVehicle implements IFuel {
 
     private FuelType fuelType;
     private Integer fuelTankVolume;
@@ -16,5 +19,10 @@ public class Car extends Vehicle implements IFuel {
     @Override
     public void setFuelTankVolume(Integer volume) {
         this.fuelTankVolume = volume;
+    }
+
+    @Override
+    protected void assignVehicleDimension() {
+        setDimension(VehicleDimension.NORMAL);
     }
 }

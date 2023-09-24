@@ -1,6 +1,6 @@
 package practices.one;
 
-public class OOPPractices1 {
+public class VehicleFabric {
     //Bizim bir fabrikamız var ve bu fabrikada hem otomobil, hem kamyonet hem de motorsiklet ve bisiklet üretilmektedir.
     //Bu üretim esnasında bizim temel işlevleri yönetebileceğimiz bir yapı kurgulanmak istenmektedir. Bu kurgu için öncelikli olarak
     //çıktı değerleri ve üretim aşamasında bizim ürettiğimiz tipteki taşıtlar için temel fonksiyoneliteler olması gerekmektedir.
@@ -32,4 +32,6 @@ public class OOPPractices1 {
     //abstract setBoyut(AracBoyut);
     //void calistir();
     //void durdur();
+
+    
 }

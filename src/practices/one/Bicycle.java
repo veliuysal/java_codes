@@ -1,6 +1,15 @@
 package practices.one;
 
-public class Bicycle extends Vehicle {
+import practices.one.abstracts.AbstractVehicle;
+import practices.one.enums.VehicleDimension;
+import practices.one.interfaces.IVehicle;
+
+public class Bicycle extends AbstractVehicle {
+
+    @Override
+    protected void assignVehicleDimension() {
+        System.out.println("Empty Method...");
+    }
 
     @Override
     public void run() {

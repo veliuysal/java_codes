@@ -1,4 +1,4 @@
-package patterns;
+package patterns.singleton;
 
 class LazySingletonInstance {
     private static LazySingletonInstance instance;

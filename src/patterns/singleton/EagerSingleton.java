@@ -1,4 +1,4 @@
-package patterns;
+package patterns.singleton;
 
 class EagerSingletonInstance {
     private static EagerSingletonInstance instance = new EagerSingletonInstance();

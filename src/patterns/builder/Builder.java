@@ -1,4 +1,4 @@
-package patterns;
+package patterns.builder;
 
 class Employee {
     private String firstName;

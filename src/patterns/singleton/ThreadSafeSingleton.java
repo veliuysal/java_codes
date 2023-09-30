@@ -1,4 +1,4 @@
-package patterns;
+package patterns.singleton;
 
 class ThreadSafeSingletonInstance {
     private static ThreadSafeSingletonInstance instance;

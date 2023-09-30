@@ -1,17 +1,28 @@
 package patterns;
 
-public class LazySingleton {
-    private static LazySingleton instance;
+class LazySingletonInstance {
+    private static LazySingletonInstance instance;
 
-    private LazySingleton(){}
+    private LazySingletonInstance(){}
 
-    public static LazySingleton getInstance(){
+    public static LazySingletonInstance getInstance(){
 
         if (instance == null){
-            instance = new LazySingleton();
+            System.out.println("instance is null");
+            instance = new LazySingletonInstance();
         }
 
         return instance;
     }
 
+}
+
+public class LazySingleton {
+    public static void main(String[] args) {
+        LazySingletonInstance instance1 = LazySingletonInstance.getInstance();
+        LazySingletonInstance instance2 = LazySingletonInstance.getInstance();
+        System.out.println("instance1: "+instance1);
+        System.out.println("instance2: "+instance2);
+        System.out.println(instance1 == instance2);
+    }
 }

@@ -40,7 +40,7 @@ public class DefaultMethodInInterfaces {
         animal.run();
 
         Animal.breathe(); // interface'de bulunan static methodlari cagirabiliyoruz.(interfaceAdi.staticMethodAdi).
-        // Dog.run(); // legal degildir.
+         //Dog.run(); // legal degildir.
         // Dog.breathe(); // legal degildir.
 
         // interface'lerdeki static methodlari sadece,
